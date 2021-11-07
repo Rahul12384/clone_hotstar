@@ -1,0 +1,128 @@
+.titlebar{
+    height: 30px;
+    display: flex;
+    /* margin-left: 15px;
+    margin-top: 30px; */
+    position:relative;
+}
+
+.line{
+    background-color: whitesmoke;
+    width: 20px;
+    height: 2px;
+    /* padding: 0.5px; */
+    border-radius: 1px;
+}
+
+.titlebar__3lines-line{
+    padding: 1.5px;
+}
+
+.titlebar__3lines{
+    position: relative;
+    margin-left: 15px;
+    margin-top: 28px;
+}
+
+.titlebar__logo{
+    margin-left: 15px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.titlebar__subscribe{
+    margin-left: 15px;
+    margin-top: 23px;
+    right: 70px;
+    color: transparent;
+    position: relative;
+}
+
+.titlebar__subscribe-button{
+    padding: 5px 12px 5px 12px;
+    background-color: #1f80e0;
+    border-radius: 5px;
+    color: whitesmoke;
+    border: none;
+    font-size: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    /* right: 90px; */
+
+}
+
+.titlebar__tv{
+    color: whitesmoke;
+    margin-left: 15px;
+    margin-top: 23px;
+    position: relative;
+    resize: horizontal;
+    overflow: visible;
+}
+
+.titlebar__movies{
+    color: whitesmoke;
+    margin-left: 15px;
+    margin-top: 23px;
+    position: relative;
+    resize: horizontal;
+    overflow:visible;
+}
+
+.titlebar__kids{
+    margin-left: 15px;
+    margin-top: 25px;
+    background:  no-repeat;
+    position: relative;
+    resize: horizontal;
+    overflow:visible;
+}
+
+.titlebar__searchbox{
+    margin-left: 15px;
+    margin-top: 28px;
+    height: 20px;
+    width: 55vw;
+    right: 80px;
+    resize: horizontal;
+    overflow:auto;
+    background-color: transparent;    
+    box-sizing: border-box;
+    position: relative;
+    /* right: 30px; */
+}
+
+.titlebar__searchbox-inp{
+    float: right;
+    border: transparent;
+    color: whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    padding: 2px;
+    background-color: transparent;
+    position: relative;
+    /* right: 170px;  */
+}
+
+.titlebar__login{
+    position: relative;
+    right: 60px; 
+    flex-direction: flex-end;
+    float:right;
+    display: flex ;
+    margin-left: 15px;
+    margin-top: 28px;
+    color: whitesmoke;
+    font-size: 15px;
+    /* position: relative; */
+}
+
+@media screen and (max-width: 1000px) {
+  
+    .titlebar__login,
+    .titlebar__searchbox,
+    .titlebar__subscribe {
+        width: 70%;
+    }
+}
