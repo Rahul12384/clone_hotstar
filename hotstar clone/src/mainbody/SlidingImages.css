@@ -17,12 +17,26 @@
 
 
  .outer{
-     height:200px;
-     /* background-color: yellow; */
-     width: 100vw;
-     display: flex;
+     height:1000px;
+     background-color: yellow;
+     width: 1000px;
+     display: inline;
      margin-left: 100px;
  }
+ .outer>h2{
+     color: whitesmoke;
+     margin-left: 45%;
+     font-family:"Roboto","HelveticaNeue-Light",sans-serif;
+     
+ }
+
+
+.tp{
+    height: 500px;
+    width: 500px;
+    background-color: red;
+
+}
 
  /* .inner{
      display: flex;
@@ -30,3 +44,9 @@
      width: 400px;
      background-color: turquoise;
  } */
+
+ .p{
+     color: red;
+     font-size: 20px;
+ }
+

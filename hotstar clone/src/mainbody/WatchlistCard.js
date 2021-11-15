@@ -1,26 +1,17 @@
 import React from 'react'
-
-const ImageCard = (props) => {
+import "./WatchlistCard.css"
+const WatchlistCard = (props) => {
     // const clickhandler=()=>{
     //     console.log(props.name)
     // }
-    // const [button_text,setButtonText]=useState('ADD TO WATCH LIST')
-    // var button_display=<p>ADD TO WATCH LIST</p>
-
-    const onAddWatchlist=()=>{
+    const onRemoveWatchList=()=>{
         console.log("in imagecard"+props.id)
-        console.log(props.inwatch)
-        // button_display=<p>REMOVE FROM WATCHLIST</p>
-        // setButtonText('REMOVE FROM WATCHLIST')
-        // props.inwatch=1
-        // console.log(props.inwatch)
-        props.onClickWatchList(props.id)
+        props.onRemoveWatchList(props.id)
     }
-
 
     return (
         <div className="imagecard">
-            <a href={props.link}><img className="ima" src={props.url} alt="" ></img>
+            <a href={props.link}><img className="ima" src={props.url} alt=""></img>
             </a>
             <div className="hide">
                 <div className="hide__title">
@@ -40,12 +31,12 @@ const ImageCard = (props) => {
                     <button>WATCH MOVIE</button>
                 </div>
                 <div className="hide__addtowatchlist" >
-                    <img src="https://www.hotstar.com/assets/316d889ad60190a1ae8948c13352ff9d.svg" alt=""/>
-                    <button onClick={onAddWatchlist}>ADD TO WATCHLIST</button>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Crystal_button_cancel.svg/1024px-Crystal_button_cancel.svg.png" alt=""/>
+                    <button onClick={onRemoveWatchList} style={{color:'red'}}>REMOVE FROM WATCH LIST</button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default ImageCard
+export default WatchlistCard

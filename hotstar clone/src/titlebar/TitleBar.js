@@ -38,7 +38,7 @@ const TitleBar = () => {
                 <button className="titlebar__subscribe-button">SUBSCRIBE</button>
             </div>
             <div className="titlebar__login">
-                LOGIN
+                <button>LOGIN</button>
             </div>
         </div>
     );
