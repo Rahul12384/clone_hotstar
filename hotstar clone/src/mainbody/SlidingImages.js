@@ -1,6 +1,8 @@
 // import React from 'react'
 // //import { createBootstrapComponent } from 'react-bootstrap/esm/ThemeProvider';
 // //import 'bootstrap/dist/css/bootstrap.min.css';
+import { useRef } from "react";
+
 import Carousel from "react-elastic-carousel";
 import { useState } from "react";
 import Images from './Images';
@@ -8,8 +10,11 @@ import './ImageCard.css';
 import ImageCard from './ImageCard';
 import "./SlidingImages.css";
 import WatchlistCard from "./WatchlistCard";
+import Thumbnails from "./Thumbnails";
+import ThumbnailImages from "./ThumbnailImages";
 
 const SlidingImages = () => {
+    // const carouselRef = useRef(0)
     const [watchlist, setWatchlist] = useState([]);
     console.log('watchList:')
     console.log(watchlist)
@@ -70,28 +75,61 @@ const SlidingImages = () => {
         </Carousel >
 
     }
-    //     return (
-    // //         <div className="slidingimages">
-    // //             {/* <div>
-    // //             {Images.map(image=><img className="ima" key={image.id} src={image.url} alt=""/>)}
-    // //             </div> */}
+    const breakPoints_thumbnails = [
+        { width: 1, itemsToShow: 1 },
+        { width: 400, itemsToShow:1 },
+        { width: 600, itemsToShow: 1 },
+        { width: 800, itemsToShow: 1 },
+        { width: 1000, itemsToShow: 1 },
+        { width: 1200, itemsToShow: 1 },
+    ];
 
-    // // <div className='card1'><div>{Images.map(fun)}</div></div>
-    // //             {/* <ImageCard>
-    // //                 {Images.map(image=><img src={image.url} alt=""></img>)}
-    // //             </ImageCard> */}
-    // //         </div> 
-    //     <div className="outer">
-    //         {Images.map(image =>
-    //         <ImageCard key={image.id} url={image.url} name={image.name}></ImageCard>
-    //         )
-    //         }
+    // const onNextStart = (currentItem, nextItem) => {
+    //     if (currentItem.index === nextItem.index) {
+    //       // we hit the last item, go to first item
+    //       carouselRef.current.goTo(0);
+    //     }
+    //   };
+      
+    //   const onPrevStart = (currentItem, nextItem) => {
+    //     if (currentItem.index === nextItem.index) {
+    //       // we hit the first item, go to last item
+    //       carouselRef.current.goTo(items.length);
+    //     }
+    //   };
 
-    //     </div>
-    //     );
+    // const itemsPerPage = 1
+    const carouselRef = useRef(null);
+    // const totalPages = Math.ceil(Images.length / itemsPerPage)
+    // let resetTimeout;
+    const st=0
+    const onNextStart = (currentItem, nextItem) => {
+        if (currentItem.index === nextItem.index) {
+          // we hit the last item, go to first item
+          carouselRef.current.goTo(st);
+        }
+      };
+      const onPrevStart = (currentItem, nextItem) => {
+        if (currentItem.index === nextItem.index) {
+          // we hit the first item, go to last item
+          carouselRef.current.goTo(Images.length);
+        }
+      };
+
 
     return (
         <div className="outer">
+            <Carousel breakPoints={breakPoints_thumbnails}
+               ref={carouselRef}
+               onPrevStart={onPrevStart}
+               onNextStart={onNextStart}
+            disableArrowsOnEnd={false} enableAutoPlay={true} autoPlaySpeed={1500} >
+            {ThumbnailImages.map(image =>
+                    <Thumbnails onClickWatchList={onPressWatchList}
+                        key={image.id} id={image.id} inwatch={image.inwatch} 
+                        url={image.url} link={image.link} title={image.title} description={image.description} subtitle={image.subtitle} duration={image.duration} ></Thumbnails>
+                )}
+            </Carousel>
             {he}
             {
             content_watchlist}
