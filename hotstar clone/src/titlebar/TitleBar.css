@@ -15,14 +15,66 @@
 }
 
 .titlebar__3lines-line{
+
     padding: 1.5px;
 }
 
 .titlebar__3lines{
+    background-color: transparent;
+    height: 30px;
+    padding-right: 10px;
     position: relative;
     margin-left: 15px;
     margin-top: 28px;
 }
+
+.titlebar__3lines-content {
+    display: none;
+    height: 100px;
+    border-radius: 6px;
+    position: absolute;
+    color: whitesmoke;
+    background-color: #192133;
+    min-width: 140px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    box-shadow: 0 4px 5px 0 rgb(0 0 0 / 22%);
+    /* padding: 12px 16px; */
+    /* padding: 5px 5px 5px 5px; */
+    z-index: 1;
+  }
+  
+  .titlebar__3lines:hover .titlebar__3lines-content {
+    display: block;
+    opacity: 0.8;
+    color: whitesmoke;
+    height: 30px;
+    width: 130px;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 12px;
+    text-decoration: none;
+    border: none;
+  }
+
+  .titlebar__3lines-content-link:hover{
+    font-size: 14px;
+    background: rgba(0,0,0,0.4);
+    height: 30px;
+    width: 130px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .titlebar__3lines:hover .titlebar__3lines-content {
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+    display: block;
+    
+  }
 
 .titlebar__logo{
     margin-left: 15px;
@@ -32,7 +84,7 @@
 
 .titlebar__subscribe{
     margin-left: 15px;
-    margin-top: 23px;
+    margin-top: 30px;
     right: 70px;
     color: transparent;
     position: relative;
@@ -55,12 +107,65 @@
 
 .titlebar__tv{
     color: whitesmoke;
+    background-color: transparent;
+    height: 50px;
+    padding-right: 10px;
+    /* width: 20px; */
     margin-left: 15px;
     margin-top: 23px;
     position: relative;
-    resize: horizontal;
-    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
 }
+
+.titlebar__tv-content {
+    display: none;
+    border-radius: 6px;
+    position: absolute;
+    color: whitesmoke;
+    background-color: #192133;
+    min-width: 140px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    box-shadow: 0 4px 5px 0 rgb(0 0 0 / 22%);
+    /* padding: 12px 16px; */
+    /* padding: 5px 5px 5px 5px; */
+    z-index: 1;
+    transition-duration: 5s;
+    text-decoration: none;
+  }
+
+  .titlebar__tv-content-link{
+      /* text-align: center; */
+    opacity: 0.8;
+    color: whitesmoke;
+    height: 40px;
+    width: 100%;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 12px;
+    text-decoration: none;
+    border: none;
+    /* margin-top: 10px; */
+  }
+  .titlebar__tv-content-link:hover{
+    font-size: 14px;
+    background: rgba(0,0,0,0.4);
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .titlebar__tv:hover .titlebar__tv-content {
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+    display: block;
+    
+  }
 
 .titlebar__movies{
     color: whitesmoke;
@@ -86,24 +191,36 @@
     margin-top: 28px;
     height: 30px;
     width: 55vw;
-    right: 80px;
+    right: 100px;
     resize: horizontal;
     overflow:auto;
+    border-color: transparent;
     background-color: transparent;    
     box-sizing: border-box;
-    position: relative;
+    /* border: none; */
     /* right: 30px; */
 }
 
 .titlebar__searchbox-inp{
+    margin-right: 80px;
+    margin-top: 3px;
     float: right;
     border: transparent;
     color: white;
     border-bottom: 0.7px solid whitesmoke;
-    padding: 0px;
+    padding-left: 6px;
+    transition-duration: 2s;
     background-color: transparent;
     position: relative;
     /* right: 170px;  */
+}
+
+.titlebar__searchbox-inp:focus{
+    outline: none;
+    transition-duration: 2s;
+    border-bottom: 0.7px solid;
+    border-color: #1f80e0;
+    width:40%;
 }
 
 .titlebar__login{

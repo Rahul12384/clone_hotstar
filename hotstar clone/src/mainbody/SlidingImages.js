@@ -115,6 +115,18 @@ const SlidingImages = () => {
           carouselRef.current.goTo(Images.length);
         }
       };
+      const onNextEnd = (currentItem, nextItem) => {
+        if (currentItem.index === nextItem.index) {
+          // we hit the last item, go to first item
+          carouselRef.current.goTo(st);
+        }
+      };
+      const onPrevEnd = (currentItem, nextItem) => {
+        if (currentItem.index === nextItem.index) {
+          // we hit the first item, go to last item
+          carouselRef.current.goTo(Images.length);
+        }
+      };
 
 
     return (
@@ -122,8 +134,10 @@ const SlidingImages = () => {
             <Carousel breakPoints={breakPoints_thumbnails}
                ref={carouselRef}
                onPrevStart={onPrevStart}
+               onPrevEnd={onPrevEnd}
+               onNextEnd={onNextEnd}
                onNextStart={onNextStart}
-            disableArrowsOnEnd={false} enableAutoPlay={true} autoPlaySpeed={1500} >
+            disableArrowsOnEnd={false} enableAutoPlay={true} autoPlaySpeed={5000} >
             {ThumbnailImages.map(image =>
                     <Thumbnails onClickWatchList={onPressWatchList}
                         key={image.id} id={image.id} inwatch={image.inwatch} 
