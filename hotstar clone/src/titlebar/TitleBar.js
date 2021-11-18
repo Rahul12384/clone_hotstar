@@ -13,7 +13,11 @@ const TitleBar = () => {
                     <div className="line"></div>
                 </div>
                 <div className="titlebar__3lines-content">
-                <a href="" style={{ textDecorationColor: 'transparent' }}><div className="titlebar__3lines-content-link">Tamil</div></a>
+                <a href="" style={{ textDecorationColor: 'transparent' }}>
+                    {/* <img src="" alt=""></img> */}
+                    <div className="titlebar__3lines-content-link">Channels</div></a>
+                <a href="" style={{ textDecorationColor: 'transparent' }}><div className="titlebar__3lines-content-link">Languages</div></a>
+                <a href="" style={{ textDecorationColor: 'transparent' }}><div className="titlebar__3lines-content-link">Genres</div></a>
                 </div>
             </div>
             <div className="titlebar__logo" >

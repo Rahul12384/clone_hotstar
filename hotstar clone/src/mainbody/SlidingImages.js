@@ -64,7 +64,7 @@ const SlidingImages = () => {
     var content_watchlist = []
     if (watchlist.length > 0) {
         
-        he=<h2>Watchlist:</h2>
+        he=<h2>Watchlist</h2>
         content_watchlist = < Carousel breakPoints={breakPoints_watchlist} >
             {
                 watchlist.map(li =>
