@@ -16,25 +16,25 @@ import ThumbnailImages from "./ThumbnailImages";
 const SlidingImages = () => {
     // const carouselRef = useRef(0)
     const [watchlist, setWatchlist] = useState([]);
-    console.log('watchList:')
-    console.log(watchlist)
+    // console.log('watchList:')
+    // console.log(watchlist)
     // const button_display=<button onClick={onAddWatchlist}>{button_display}</button>
     const onClickRemoveWatchList=(removeid) => {
         const removeWatchItem = watchlist.filter((lis) => lis[0].id !== removeid)
         setWatchlist(removeWatchItem)
     }
     const onPressWatchList = (itemid) => {
-        console.log("in sliding" + itemid)
+        // console.log("in sliding" + itemid)
         const addWatchItem = Images.filter((image) => image.id === itemid)
-        console.log(addWatchItem)
+        // console.log(addWatchItem)
         const newWatchItem = {
             ...addWatchItem,
             // id: Math.random().toString(),
         }
 
-        console.log("new item:")
-        console.log(newWatchItem)
-        console.log(Images)
+        // console.log("new item:")
+        // console.log(newWatchItem)
+        // console.log(Images)
 
         setWatchlist((prevWatchlist) => {
             const ab = [newWatchItem, ...prevWatchlist]
@@ -73,7 +73,6 @@ const SlidingImages = () => {
                 )
             }
         </Carousel >
-
     }
     const breakPoints_thumbnails = [
         { width: 1, itemsToShow: 1 },
@@ -104,6 +103,7 @@ const SlidingImages = () => {
     // let resetTimeout;
     const st=0
     const onNextStart = (currentItem, nextItem) => {
+        console.log(currentItem,nextItem)
         if (currentItem.index === nextItem.index) {
           // we hit the last item, go to first item
           carouselRef.current.goTo(st);
@@ -116,9 +116,11 @@ const SlidingImages = () => {
         }
       };
       const onNextEnd = (currentItem, nextItem) => {
+          console.log("end")
+          console.log(currentItem,nextItem)
         if (currentItem.index === nextItem.index) {
           // we hit the last item, go to first item
-          carouselRef.current.goTo(st);
+          carouselRef.current.goTo(0);
         }
       };
       const onPrevEnd = (currentItem, nextItem) => {
@@ -150,6 +152,7 @@ const SlidingImages = () => {
             <Carousel breakPoints={breakPoints}>
                 {Images.map(image =>
                     <ImageCard onClickWatchList={onPressWatchList}
+                        onRemoveWatchList={onClickRemoveWatchList}
                         key={image.id} id={image.id} inwatch={image.inwatch} 
                         url={image.url} link={image.link} title={image.title} description={image.description} subtitle={image.subtitle} duration={image.duration} ></ImageCard>
                 )}

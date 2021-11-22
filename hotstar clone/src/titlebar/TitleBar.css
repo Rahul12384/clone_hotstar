@@ -116,6 +116,7 @@
   } */
 
 .titlebar__logo{
+  cursor: pointer;
     margin-left: 15px;
     margin-top: 15px;
     position: relative;
@@ -216,6 +217,7 @@
 }
 
 .titlebar__kids{
+  cursor: pointer;
     margin-left: 15px;
     margin-top: 25px;
     background:  no-repeat;

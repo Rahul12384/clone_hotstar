@@ -6,18 +6,39 @@ const ImageCard = (props) => {
     // }
     // const [button_text,setButtonText]=useState('ADD TO WATCH LIST')
     // var button_display=<p>ADD TO WATCH LIST</p>
-
+    
+    var ab='c_'+props.id
     const onAddWatchlist=()=>{
-        console.log("in imagecard"+props.id)
-        console.log(props.inwatch)
+        var cd=Number(localStorage.getItem(ab))
+        cd=cd+1
+        localStorage.setItem(ab,String(cd))
+        // console.log("in imagecard"+props.id)
+        // console.log(props.inwatch)
         // button_display=<p>REMOVE FROM WATCHLIST</p>
         // setButtonText('REMOVE FROM WATCHLIST')
         // props.inwatch=1
         // console.log(props.inwatch)
         props.onClickWatchList(props.id)
     }
-
-
+    const onRemoveWatchList=()=>{
+        var ab='c_'+props.id
+        var cd=Number(localStorage.getItem(ab))
+        cd=cd+1
+        localStorage.setItem(ab,String(cd))
+        console.log("in imagecard"+props.id)
+        props.onRemoveWatchList(props.id)
+    }
+    var bu=<button onClick={onAddWatchlist}>ADD TO WATCHLIST</button>
+    var im=<img src="https://www.hotstar.com/assets/316d889ad60190a1ae8948c13352ff9d.svg" alt=""/>
+    if(Number(localStorage.getItem(ab))%2===0){
+        bu=<button onClick={onAddWatchlist}>ADD TO WATCHLIST</button>
+        im=<img src="https://www.hotstar.com/assets/316d889ad60190a1ae8948c13352ff9d.svg" alt=""/>
+    }
+    else{
+        bu=<button onClick={onRemoveWatchList} style={{color:'red'}}>REMOVE FROM WATCH LIST</button>
+        im=<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Crystal_button_cancel.svg/1024px-Crystal_button_cancel.svg.png" alt=""/>
+    }
+    
     return (
         <div className="imagecard">
             <a href={props.link}><img className="ima" src={props.url} alt="" ></img>
@@ -40,8 +61,8 @@ const ImageCard = (props) => {
                     <button>WATCH MOVIE</button>
                 </div>
                 <div className="hide__addtowatchlist" >
-                    <img src="https://www.hotstar.com/assets/316d889ad60190a1ae8948c13352ff9d.svg" alt=""/>
-                    <button onClick={onAddWatchlist}>ADD TO WATCHLIST</button>
+                    {im}
+                    {bu}
                 </div>
             </div>
         </div>

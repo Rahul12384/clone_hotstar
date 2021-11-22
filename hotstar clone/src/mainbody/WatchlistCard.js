@@ -5,6 +5,10 @@ const WatchlistCard = (props) => {
     //     console.log(props.name)
     // }
     const onRemoveWatchList=()=>{
+        var ab='c_'+props.id
+        var cd=Number(localStorage.getItem(ab))
+        cd=cd+1
+        localStorage.setItem(ab,String(cd))
         console.log("in imagecard"+props.id)
         props.onRemoveWatchList(props.id)
     }
