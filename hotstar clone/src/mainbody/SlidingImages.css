@@ -18,7 +18,7 @@
 
  .outer{
      height:1000px;
-     background-color: yellow;
+     /* background-color: yellow; */
      width: 1000px;
      display: inline;
      margin-left: 100px;

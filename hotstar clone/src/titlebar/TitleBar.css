@@ -1,9 +1,11 @@
 .titlebar{
-    height: 30px;
+    height: 70px;
+    width: 100vw;
     display: flex;
     /* margin-left: 15px;
     margin-top: 30px; */
     position:relative;
+    /* background-color: red; */
 }
 
 .line{
@@ -124,7 +126,7 @@
 
 .titlebar__subscribe{
     margin-left: 15px;
-    margin-top: 30px;
+    margin-top: 22px;
     right: 70px;
     color: transparent;
     position: relative;
@@ -229,14 +231,14 @@
 .titlebar__searchbox{
     margin-left: 15px;
     /* margin-right: 3%; */
-    margin-top: 28px;
+    margin-top: 18px;
     height: 30px;
-    width: 55vw;
+    width: 50vw;
     right: 100px;
     resize: horizontal;
     overflow:auto;
     border-color: transparent;
-    background-color: transparent;    
+    /* background-color: blue;     */
     box-sizing: border-box;
     /* border: none; */
     /* right: 30px; */
@@ -258,10 +260,11 @@
 
 .titlebar__searchbox-inp:focus{
     outline: none;
+    transform: translateX(-20px);
     transition-duration: 2s;
     border-bottom: 0.7px solid;
     border-color: #1f80e0;
-    width:40%;
+    width:70%;
 }
 
 .titlebar__login{
@@ -272,7 +275,7 @@
     display: flex ;
     /* margin-right: 5%; */
     margin-left: 15px;
-    margin-top: 28px;
+    margin-top: 22px;
     color: whitesmoke;
     font-size: 15px;
     height: 30px;
