@@ -1,0 +1,158 @@
+/* .popuplogin{
+    position: fixed;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popuplogin-inner{
+    border-radius: 4px;
+    position: absolute;
+    padding: 32px;
+    height: 350px;
+    width: 370px;
+    max-width: 640px;
+    background-color: #07263D;
+    z-index: -1;
+} 
+ */
+
+ .popuplogin{
+     /* background-color: blue;
+     height: 300px;
+     width: 300px; */
+     /* top: 30%;
+     left: 38%; */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+ }
+
+ .popuplogin-inner{
+    /* background-color: turquoise; */
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 4px;
+    padding: 32px;
+    height: 350px;
+    width: 370px;
+    max-width: 640px;
+    background-color: #07263D;
+    z-index: -1;
+ }
+
+ .popuplogin_mobile{
+    border: none;
+    background-color: transparent;
+    margin-top: 40px;
+    margin-left: 20px;
+    height: 30px;
+ }
+ 
+ .popuplogin_mobile-inp{
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.5px solid #1f80e0;
+    /* margin-top: 50px; */
+    width: 260px;
+    height: 35px;
+    /* margin-left: 20px; */
+    font-size: 12px;
+    padding-left: 10px;
+    outline: none;
+    color: whitesmoke;
+ }
+
+ .popuplogin_mobile-inp::-webkit-input-placeholder { 
+    color: whitesmoke;
+    /* padding-bottom: 50px; */
+    padding-left: 0px;
+    opacity: 0.6;
+    font-size: 15px;
+    /* margin-bottom: 10px; */
+}
+.popuplogin_continue-text{
+    color:whitesmoke;
+    margin-top: 35px;
+    margin-left: 28px;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.popuplogin_continue{
+    background-color: red;
+    margin-top: 35px;
+    margin-left: 20px;
+    border-radius: 3px;
+    height: 40px;
+    width: 260px;
+    background-color: #1f80e0 ;
+}
+
+.popuplogin_continue-btn{
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background-color: transparent;
+    color: whitesmoke;
+    /* opacity: 0.8; */
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    padding-left: -10px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.popuplogin_spanbox{
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 20px;
+    width: 260px;
+    /* background-color: red; */
+
+}
+.popuplogin_span1{
+    font-size: 8px;
+    color: whitesmoke;
+    opacity: 0.6;
+}
+
+.popuplogin_span2{
+    font-size: 10px;
+    color: #1f80e0;
+    /* opacity: 0.6; */
+    font-weight: 500;
+}
+
+.popuplogin_close-btn{
+    margin-top: -10px;
+    margin-right: -15px;
+    float: right;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.popuplogin_back-btn{
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./ImageCard.css";
 const ImageCard = (props) => {
     // const clickhandler=()=>{
     //     console.log(props.name)

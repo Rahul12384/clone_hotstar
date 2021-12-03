@@ -1,5 +1,10 @@
+import Popup from "./Popup";
 import "./TitleBar.css";
+
+import { useState } from "react";
 const TitleBar = () => {
+    const [trigger, setTrigger] = useState(false)
+
     return (
         <div className="titlebar">
             <div className="titlebar__3lines">
@@ -73,8 +78,10 @@ const TitleBar = () => {
                 </a>
             </div>
             <div className="titlebar__login">
-                <button>LOGIN</button>
+                <button onClick={()=>setTrigger(true)}>LOGIN</button>
             </div>
+            <Popup trigger={trigger} setTrigger={setTrigger}>
+            </Popup>
         </div>
     );
 }

@@ -2,7 +2,6 @@
 // //import { createBootstrapComponent } from 'react-bootstrap/esm/ThemeProvider';
 // //import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRef } from "react";
-
 import Carousel from "react-elastic-carousel";
 import { useState } from "react";
 import Images from "./Images";
@@ -38,8 +37,8 @@ const SlidingImages = () => {
 
     setWatchlist((prevWatchlist) => {
       const ab = [newWatchItem, ...prevWatchlist];
-      console.log("ab:");
-      console.log(ab);
+      // console.log("ab:");
+      // console.log(ab);
       return ab;
     });
   };
@@ -55,7 +54,7 @@ const SlidingImages = () => {
     { width: 1, itemsToShow: 1 },
     { width: 400, itemsToShow: 2 },
     { width: 600, itemsToShow: 3 },
-    { width: 800, itemsToShow: 3 },
+    { width: 800, itemsToShow: 4 },
     { width: 1000, itemsToShow: 5 },
     { width: 1200, itemsToShow: 6 },
   ];
@@ -64,7 +63,7 @@ const SlidingImages = () => {
   if (watchlist.length > 0) {
     he = <h2>Watchlist</h2>;
     content_watchlist = (
-      <Carousel breakPoints={breakPoints_watchlist}>
+      <Carousel breakPoints={breakPoints_watchlist} itemPosition="START" renderPagination={({pages,activePage,onClick})=>{return <div/>}}>
         {watchlist.map((li) => (
           <WatchlistCard
             onRemoveWatchList={onClickRemoveWatchList}
@@ -96,8 +95,8 @@ const SlidingImages = () => {
   // const totalPages = Math.ceil(Images.length / itemsPerPage)
   // let resetTimeout;
   const onNextStart = (currentItem, nextItem) => {
-    console.log("start");
-    console.log(nextItem);
+    // console.log("start");
+    // console.log(nextItem);
     if (currentItem.index === nextItem.index) {
       // we hit the last item, go to first item
       carouselRef.current.goTo(0);
@@ -110,8 +109,8 @@ const SlidingImages = () => {
     }
   };
   const onNextEnd = (currentItem, nextItem) => {
-    console.log("end");
-    console.log(nextItem, ThumbnailImages.length - 1);
+    // console.log("end");
+    // console.log(nextItem, ThumbnailImages.length - 1);
     if (currentItem.index === ThumbnailImages.length - 1) {
       // we hit the last item, go to first item
       setTimeout(() => {
@@ -156,7 +155,7 @@ const SlidingImages = () => {
       </Carousel>
       {he}
       {content_watchlist}
-      <Carousel breakPoints={breakPoints}>
+      <Carousel breakPoints={breakPoints} >
         {Images.map((image) => (
           <ImageCard
             onClickWatchList={onPressWatchList}

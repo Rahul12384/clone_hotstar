@@ -1,0 +1,171 @@
+/* 
+.popupemfb{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popupemfb-inner{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 4px;
+    padding: 32px;
+    height: 350px;
+    width: 370px;
+    max-width: 640px;
+    background-color: #07263D;
+    z-index: -1;
+} */
+
+.popupemfb{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popupemfb-inner{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 4px;
+    padding: 32px;
+    height: 350px;
+    width: 370px;
+    max-width: 640px;
+    background-color: #07263D;
+    z-index: -1;
+}
+
+.popupemfb_back-btn{
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.popupemfb_haveemfb-text{
+    color:whitesmoke;
+    margin-top: 35px;
+    margin-left: 24px;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.popupemfb_enteremail{
+    border: none;
+    background-color: transparent;
+    margin-top: 13px;
+    margin-left: 20px;
+    height: 30px;
+ }
+ 
+ .popupemfb_enteremail-inp{
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.5px solid #1f80e0;
+    /* margin-top: 50px; */
+    width: 270px;
+    height: 35px;
+    /* margin-left: 20px; */
+    font-size: 12px;
+    /* padding-left: 10px; */
+    outline: none;
+    color: whitesmoke;
+ }
+
+ .popupemfb_enteremail-inp::-webkit-input-placeholder { 
+    color: whitesmoke;
+    /* padding-bottom: 50px; */
+    padding-left: 0px;
+    opacity: 0.6;
+    font-size: 13px;
+    /* margin-bottom: 10px; */
+}
+
+.popupemfb_continue{
+    background-color: red;
+    margin-top: 30px;
+    margin-left: 15px;
+    border-radius: 3px;
+    height: 36px;
+    width: 280px;
+    background-color: #1f80e0 ;
+}
+
+.popupemfb_continue-btn{
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background-color: transparent;
+    color: whitesmoke;
+    /* opacity: 0.8; */
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    padding-left: -10px;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.popupemfb_or{
+    color: whitesmoke;
+    opacity: 0.8;
+    margin-left: 145px;
+    margin-top: 14px;
+    font-size: 9px;
+    opacity: 0.6;
+}
+
+
+.popupemfb_facebook{
+    background-color: red;
+    margin-top: 13px;
+    margin-left: 15px;
+    border-radius: 3px;
+    height: 36px;
+    width: 280px;
+    background-color: #3F51B5 ;
+    display: flex;
+}
+
+.popupemfb_facebook-img{
+    margin-top: 10px;
+    margin-left: 59px;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+}
+
+.popupemfb_facebook-btn{
+    margin-left: -59px;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background-color: transparent;
+    color: whitesmoke;
+    /* opacity: 0.8; */
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    padding-left: -10px;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
