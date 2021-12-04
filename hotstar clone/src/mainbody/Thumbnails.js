@@ -16,13 +16,14 @@ const Thumbnails=(props)=>{
     //     props.onClickWatchList(props.id)
     // }
 
-
+    // console.log(props.url)
     return (
         <div className="thumbnailcard">
             <a href={props.link}><img className="thumb_ima" src={props.url} alt="" ></img>
             </a>
             <div className="thumb_hide">
                 <div className="thumb_hide__title">
+                    {props.name}
                     {props.title}
                 </div>
                 <div className="thumb_hide__duration">

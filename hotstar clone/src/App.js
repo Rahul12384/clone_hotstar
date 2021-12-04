@@ -11,7 +11,7 @@ function App() {
       <div className="app__body">
         <SlidingImages/>
         <div className="app__body-inner"></div>
-      <h2>Let's get started!</h2>
+      {/* <h2>Let's get started!</h2> */}
       </div>
     </div>
   );

@@ -70,7 +70,7 @@
     width: 40%;
     /* margin: 10px; */
     border-radius: 8px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.6);
     display: block;
     background-blend-mode: overlay;
     /* left: 20; */
@@ -88,13 +88,14 @@
 
 
 .thumb_hide__title{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
-    padding-top: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
 }
 
 .thumb_hide__subtitle{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     padding-top: 15px;
 }
@@ -106,7 +107,7 @@
 }
 
 .thumb_hide__description{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     padding-top: 15px;
 }

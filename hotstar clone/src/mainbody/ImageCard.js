@@ -1,6 +1,7 @@
 import React from 'react'
 import "./ImageCard.css";
 const ImageCard = (props) => {
+    console.log(props.name,"props.name")
     // const clickhandler=()=>{
     //     console.log(props.name)
     // }
@@ -45,6 +46,8 @@ const ImageCard = (props) => {
             </a>
             <div className="hide">
                 <div className="hide__title">
+
+                    {props.name}
                     {props.title}
                 </div>
                 <div className="hide__duration">
