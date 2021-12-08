@@ -9,6 +9,7 @@
 } */
 
 .imagecard{
+    cursor: pointer;
     /* align-items: center;
     justify-content: center; */
     position: relative;

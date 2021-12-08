@@ -11,6 +11,7 @@
 .thumbnailcard{
     /* align-items: center;
     justify-content: center; */
+    cursor: pointer;
     position: relative;
     background: linear-gradient(to right, #030b17, rgba(0,0,0,0));
     /* right: 10; */
