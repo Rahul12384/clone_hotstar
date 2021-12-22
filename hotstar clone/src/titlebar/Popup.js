@@ -39,7 +39,7 @@ const Popup = (props) => {
     return ()=>{
       document.removeEventListener("mousedown",handler)
     }
-  },[popupRef]);
+  },[popupRef,props]);
 
 
   if (val === 0 && !trigEmFb) {
@@ -48,7 +48,8 @@ const Popup = (props) => {
         <div ref={popupRef} className="popup_inner">
           {props.children}
           <img
-            className="popup_close-btn"
+            className="popup_close-btn" 
+            alt=""
             onClick={() => props.setTrigger(false)}
             src="https://png.pngtree.com/element_our/20190601/ourlarge/pngtree-white-cancel-button-icon-image_1338668.jpg"
           ></img>

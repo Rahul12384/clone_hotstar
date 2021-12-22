@@ -1,6 +1,7 @@
 import React from "react";
 import "./PopupEmFb.css";
 import {useEffect,useRef} from "react"
+// import GoogleLogin  from "react-google-login"
 
 function PopupEmFb(props) {
   console.log("in popupEmFb");
@@ -24,14 +25,19 @@ function PopupEmFb(props) {
     return () => {
       document.removeEventListener("mousedown", handler);
     };
-  }, [popupEmFbRef]);
+  }, [popupEmFbRef,props]);
 
-
+  // const responseGoogle=(response)=>{
+  //   console.log(response)
+  //   console.log(response.profileObj)
+  //   console.log(response.tokenObj.access_token)
+  // }
   return props.trigEmFb ? (
     <div className="popupemfb">
       {console.log("in div popupemfb")}
       <div ref={popupEmFbRef} className="popupemfb-inner">
         <img
+        alt=""
           className="popupemfb_back-btn"
           onClick={() => props.setTrigEmFb(false)}
           src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color/254000/38-512.png"
@@ -54,6 +60,15 @@ function PopupEmFb(props) {
             <img className="popupemfb_facebook-img" src="https://thumbs.dreamstime.com/b/simple-vector-filled-flat-facebook-icon-isolated-white-background-social-media-icon-facebook-icon-134700832.jpg" alt=""/>
           <button className="popupemfb_facebook-btn">Login with Facebook</button>
         </div>
+        {/* <div className="popupemfb_facebook">
+          <GoogleLogin className="popupemfb_facebook-btn"
+            clientId="41263349064-khfbb8h5h0mlaoiehf9gmrg83d69jfig.apps.googleusercontent.com"
+            buttonText="Login"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+            />
+        </div> */}
         </a>
       </div>
     </div>

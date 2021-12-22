@@ -1,7 +1,7 @@
 import TitleBar from "./titlebar/TitleBar";
 import SlidingImages from "./mainbody/SlidingImages";
 import './App.css';
-//import ImageCard from "./mainbody/ImageCard";
+
 function App() {
   return (
     <div className="app">

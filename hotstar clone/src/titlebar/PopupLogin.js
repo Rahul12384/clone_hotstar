@@ -30,11 +30,12 @@ function PopupLogin(props) {
       return () => {
         document.removeEventListener("mousedown", handler);
       };
-    }, [popupLoginRef]);
+    }, [popupLoginRef,props]);
   return props.trig ? (
     <div className="popuplogin">
       <div ref={popupLoginRef} className="popuplogin-inner">
         <img
+        alt=""
           className="popuplogin_back-btn"
           onClick={() => props.setVal(0)}
           src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color/254000/38-512.png"

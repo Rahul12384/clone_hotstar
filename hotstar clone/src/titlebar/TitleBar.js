@@ -1,7 +1,16 @@
 import Popup from "./Popup";
 import "./TitleBar.css";
-
+import LoginButton from "./LoginButton";
 import { useState } from "react";
+// import { Auth0Provider } from "@auth0/auth0-react";
+import {Route,Routes,Link} from 'react-router-dom'
+import Welcome from "../Welcome";
+// import VerifierChallenger from "../VerifierChallenger";
+import Login from "../Login";
+// import Welcome from "../Welcome";
+// import App from "../App";
+      
+
 const TitleBar = () => {
     const [trigger, setTrigger] = useState(false)
 
@@ -80,8 +89,24 @@ const TitleBar = () => {
             <div className="titlebar__login">
                 <button onClick={()=>setTrigger(true)}>LOGIN</button>
             </div>
+            {/* <Link to="/Welcome">welcome</Link> */}
+            <Link to="/login">login</Link>
+            <LoginButton/>
+            <Routes>
+            {/* :code/:state */}
+                {/* <Route path="/Welcome/:code/:state" element={<Welcome/>}>
+                </Route> */}
+                <Route path="/Welcome" element={<Welcome/>}>
+                </Route>
+                <Route path="/login" element={<Login/>}>
+                </Route>
+                {/* <Route path="/" element={<App/>}>
+                </Route> */}
+            </Routes>
+            {/* <LoginButton/> */}
             <Popup trigger={trigger} setTrigger={setTrigger}>
             </Popup>
+            {/* <VerifierChallenger/> */}
         </div>
     );
 }

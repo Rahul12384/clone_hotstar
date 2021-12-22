@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ImageCard.css";
 const ImageCard = (props) => {
-    console.log(props.name,"props.name")
+    //console.log(props.name,"props.name")
     // const clickhandler=()=>{
     //     console.log(props.name)
     // }
@@ -26,7 +26,7 @@ const ImageCard = (props) => {
         var cd=Number(localStorage.getItem(ab))
         cd=cd+1
         localStorage.setItem(ab,String(cd))
-        console.log("in imagecard"+props.id)
+        //console.log("in imagecard"+props.id)
         props.onRemoveWatchList(props.id)
     }
     var bu=<button onClick={onAddWatchlist}>ADD TO WATCHLIST</button>

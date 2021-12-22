@@ -12,6 +12,7 @@ import WatchlistCard from "./WatchlistCard";
 import Thumbnails from "./Thumbnails";
 import ThumbnailImages from "./ThumbnailImages";
 import ApiData from "./ApiData";
+import VerifierChallenger from "../VerifierChallenger";
 
 
 const SlidingImages = () => {
@@ -37,11 +38,12 @@ const SlidingImages = () => {
     setWatchlist(removeWatchItem);
   };
   const onPressWatchList = (itemid) => {
-    console.log("in onpress" + itemid)
-    console.log("movie",movie)
+    //console.log("in onpress" + itemid)
+    //console.log("movie",movie)
     movie.filter((image) => {if (image.id === itemid){
-      console.log(image)
+      //console.log(image)
       setWatchlist([...watchlist,image])}
+      return
       // console
     });
     // console.log("addwatchitem",addWatchItem)
@@ -192,9 +194,10 @@ const SlidingImages = () => {
       );
   }, []);
 
-  console.log(movie)
+  //console.log(movie)
   return (
     <div className="outer">
+      
       <Carousel
         breakPoints={breakPoints_thumbnails}
         ref={carouselRef}
@@ -319,6 +322,7 @@ const SlidingImages = () => {
           ></ImageCard>
         ))}
       </Carousel>
+      {/* <VerifierChallenger></VerifierChallenger> */}
     </div>
   );
 };
